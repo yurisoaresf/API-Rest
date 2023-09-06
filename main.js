@@ -58,6 +58,18 @@ app.post("/filmesSalvar", async(req, res) => {
     res.json(filmesSalvos);
 });
 
+app.put('/filmes/:id', async (req, res) => {
+    res.json(await Filme.findOneAndUpdate({ _id: req.params.id}, req.body));
+  });
+  
+  app.delete('/filmes/:id', async (req, res) => {
+    res.json(await Filme.deleteOne({ _id: req.params.id}));
+  });
+  
+  app.get('/filmes/:id', async (req, res) => {
+    res.json(await Filme.findOne({ _id: req.params.id}));
+  });
+
 console.log("Iniciando o Servidor Web...");
 app.listen(3000, () => {
     console.log("Servidor está no ar!");
