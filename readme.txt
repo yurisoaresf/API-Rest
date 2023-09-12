@@ -1,4 +1,4 @@
-Projeto para criação de serviços web - Rest, utilizando as seguintes tecnologias:
+Projeto para criação de serviços web com Rest, utilizando as seguintes tecnologias:
 
 
 MongoDB - Banco de dados NoSQL
